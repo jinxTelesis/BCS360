@@ -1,0 +1,55 @@
+CREATE TABLE tblCategories2(
+CategoryID int NOT NULL IDENTITY PRIMARY KEY,
+CategoryName varchar(15) NOT NULL
+);
+
+CREATE TABLE tblVendors2( -- this table might need work
+VendorID int NOT NULL IDENTITY PRIMARY KEY,
+VendorName varchar(25) NOT NULL,
+StreetNum int NOT NULL,
+StreetName varchar(25) NOT NULL,
+Email varchar(60) NOT NULL,
+City varchar(25) NULL,
+State varchar(2) NULL,
+Zip varchar(15) NULL,
+Country varchar(15) NULL
+);
+
+CREATE TABLE tblProducts2(
+ProductID int NOT NULL IDENTITY PRIMARY KEY,
+CategoryID int REFERENCES tblCategories2(CategoryID),
+ProductCode varchar(25) NOT NULL, -- good
+ProductName varchar(75) NOT NULL,
+Description varchar(2500) NOT NULL, -- might need longer
+PurchasePrice varchar(10) NOT NULL,
+DiscountPercent varchar(15) NOT NULL,
+DateAdded datetime NULL,
+RentalPrice varchar(15) NULL,
+VendorID int REFERENCES tblVendors2(VendorID)
+);
+
+CREATE TABLE tblAddress2
+(
+AddressID int NOT NULL IDENTITY PRIMARY KEY,
+CustomerID int NOT NULL,
+StreetNum int NOT NULL,
+StreetName varchar(30) NOT NULL,
+City varchar(30) NOT NULL,
+State varchar(2) NOT NULL,
+ZipCode varchar(9) NOT NULL,
+Disabled int NOT NULL
+);
+
+CREATE TABLE tblCustomers2(
+CustomerID int NOT NULL IDENTITY PRIMARY KEY,
+EmailAddress varchar(60) NOT NULL,
+FirstName varchar(30) NOT NULL,
+LastName varchar(30) NOT NULL,
+ShippingAddressID int REFERENCES tblAddress2(AddressID), -- reference
+BillingAddressID int REFERENCES tblAddress2(AddressID), -- reference
+DateAdded datetime NOT NULL,
+CustomerType varchar(1) NOT NULL,
+PrimaryContactNumber varchar(15) NOT NULL
+);
+
+
