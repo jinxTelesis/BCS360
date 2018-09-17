@@ -1,0 +1,17 @@
+SELECT tblProducts2.ProductCode, tblProducts2.ProductName, tblProducts2.PurchasePrice, tblProducts2.DiscountPercent
+FROM tblProducts2
+Order BY tblProducts2.PurchasePrice;
+
+SELECT ProductCode, ProductName, PurchasePrice, DiscountPercent
+FROM tblProducts2
+Order BY PurchasePrice;
+
+SELECT LastName + ', ' + FirstName AS FullName
+FROM tblCustomers2
+WHERE LastName LIKE '[M-Z]%'
+Order BY LastName ASC;
+
+SELECT ProductName, PurchasePrice, DateAdded
+FROM tblProducts3
+WHERE PurchasePrice > 500.00 AND PurchasePrice < 2000.00
+Order BY DateAdded DESC;
