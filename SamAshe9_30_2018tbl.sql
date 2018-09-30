@@ -14,7 +14,7 @@ LastYearSales int NULL
 
 CREATE TABLE tblVendor -- second
 (
-VendorID int NOT NULL PRIMARY KEY,
+VendorID int NOT NULL IDENTITY PRIMARY KEY,
 CraftsManFName varchar(30) NOT NULL,
 CraftsManLName varchar(30) NOT NULL,
 VendorManagerContact varchar(50) NULL,
@@ -33,7 +33,7 @@ CategoryName varchar(15) NOT NULL
 
 CREATE TABLE tblInstructor -- third
 (
-InstructorID int NOT NULL PRIMARY KEY,
+InstructorID int NOT NULL IDENTITY PRIMARY KEY,
 InstructorFName varchar(30) NOT NULL,
 InstructorLName varchar(30) NOT NULL,
 InstructorRate float default 10.00 NOT NULL,
