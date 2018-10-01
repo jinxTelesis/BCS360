@@ -35,11 +35,10 @@ CREATE TABLE tblProducts -- fourth
 (
 ProductID int NOT NULL PRIMARY KEY,
 ProductName varchar(15) NOT NULL,
-ProductPercent int NOT NULL,
 Cost float NOT NULL,
+DiscountPercent int NOT NULL,
 SpecialTax float NULL,
 ProductMake varchar(15) NULL,
-ProductName varchar(15) NOT NULL,
 ProductColor varchar(1) NULL,
 ProductSize varchar(3) NULL,
 ProductUnique bit NOT NULL,
