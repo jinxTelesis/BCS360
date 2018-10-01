@@ -57,22 +57,22 @@ INSERT INTO tblInstructor(InstructorID,InstructorFName,InstructorLName,Instructo
 SET IDENTITY_INSERT tblInstructor OFF;
 
 SET IDENTITY_INSERT tblProducts ON;
-INSERT INTO tblProducts(ProductID, ProductName,Cost,SpecialTax,ProductMake,CategoryID,ProductColor,ProductSize,ProductUnique,ProductRentalRate,ProductVendor) VALUES
-(1,'Pro vas',5000.0,0.0,'Keystone',1,'a','arc','f',10.5,1),
-(2,'Dead',5045.0,0.0,'Ringer',1,'b','arc','f',12,1),
-(3,'Mun special',300.0,0.0,'Munser',1,'a','arc','f',5.75,1),
-(4,'Big game',850,0.3,'keystoneXL',2,'r','arb','f',15.00,2),
-(5,'Advanced',800,0.0,'Brown Stone',3,'r','bbb','f',20.00,3),
-(6,'Basic',100,0.0,'Learner pro',3,'r','bbb','f',5.00,3),
-(7,'Key',2200.00,0.0,'Brown Stone',3,'b','bbb','f',60.00,3),
-(8,'Brink',15000,0.0,'Brown Stone',3,'w','bbb','t',0.00,3),
-(9,'Blue fly',800,0.0,'Ringer',3,'w','bbb','f',12.00,1),
-(10,'Fang',3800,0.0,'Snake Pit',4,'a','qaq','f',50,4),
-(11,'Low ride',850,0.0,'Mellow',1,'b','arc','f',20.00,4),
-(12,'Tusser',1200,0.0,'Mellow x',1,'w','ard','f',28.00,4),
-(13,'Tusser t',500,0.0,'Mellow x',2,'w','bbb','f',28.00,5),
-(14,'Charlie',520,0.0,'Mellow x',2,'w','bbb','f',24.00,5),
-(15,'Eigth',500,0.0,'Ted D',4,'w','arb','f',14.00,11);
+INSERT INTO tblProducts(ProductID, ProductName,Cost,DiscountPercent,SpecialTax,ProductMake,CategoryID,ProductColor,ProductSize,ProductUnique,ProductRentalRate,ProductVendor) VALUES
+(1,'Pro vas',5000.0,5,0.0,'Keystone',1,'a','arc','f',10.5,1),
+(2,'Dead',5045.0,5,0.0,'Ringer',1,'b','arc','f',12,1),
+(3,'Mun special',300.0,10,0.0,'Munser',1,'a','arc','f',5.75,1),
+(4,'Big game',850,5,0.3,'keystoneXL',2,'r','arb','f',15.00,2),
+(5,'Advanced',800,10,0.0,'Brown Stone',3,'r','bbb','f',20.00,3),
+(6,'Basic',100,10,0.0,'Learner pro',3,'r','bbb','f',5.00,3),
+(7,'Key',2200.00,10,0.0,'Brown Stone',3,'b','bbb','f',60.00,3),
+(8,'Brink',15000,10,0.0,'Brown Stone',3,'w','bbb','t',0.00,3),
+(9,'Blue fly',800,10,0.0,'Ringer',3,'w','bbb','f',12.00,1),
+(10,'Fang',3800,10,0.0,'Snake Pit',4,'a','qaq','f',50,4),
+(11,'Low ride',850,10,0.0,'Mellow',1,'b','arc','f',20.00,4),
+(12,'Tusser',1200,5,0.0,'Mellow x',1,'w','ard','f',28.00,4),
+(13,'Tusser t',500,1,0.0,'Mellow x',2,'w','bbb','f',28.00,5),
+(14,'Charlie',520,5,0.0,'Mellow x',2,'w','bbb','f',24.00,5),
+(15,'Eigth',500,5,0.0,'Ted D',4,'w','arb','f',14.00,11);
 SET IDENTITY_INSERT tblProducts OFF;
 
 
