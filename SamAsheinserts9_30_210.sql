@@ -134,6 +134,26 @@ INSERT INTO tblServiceOrder(ServiceOrdID,ServiceStateDate,ServiceEndDate,Custome
 (15,'2011-08-07','2015-07-14',12,4);
 SET IDENTITY_INSERT tblServiceOrder OFF;
 
+SET IDENTITY_INSERT tblOrderItems ON;
+INSERT INTO tblOrderItems(ItemID, ItemPrice, DiscountAmount, Quantity)VALUES
+(1,50,10,1),
+(2,150,20,1),
+(3,25,30,1),
+(4,500,0,3),
+(5,300,5,2),
+(6,100,10,2),
+(7,125,10,1),
+(8,250,10,1),
+(9,300,15,1),
+(10,150,15,5),
+(11,175,15,4),
+(12,200,15,3),
+(13,215,15,1),
+(14,300,10,1),
+(15,15,10,1);
+
+SET IDENTITY_INSERT tblOrderItems OFF;
+
 SET IDENTITY_INSERT tblRental ON;
 INSERT INTO tblRental(RentalID,StartDate,EndDate,ProductIDRentalRate,CustomerID)VALUES
 (1,'2015-11-14','2017-10-25',2,7),
