@@ -80,6 +80,14 @@ CustomerID int NOT NULL REFERENCES tblCustomers(CustomerID), -- fk
 InstrucServiceRate int NOT NULL REFERENCES tblInstructor(InstructorID), -- fk
 );
 
+CREATE TABLE tblOrderItems --Cost float NOT NULL,
+(
+ItemID int NOT NULL IDENTITY PRIMARY KEY,
+ItemPrice int NOT NULL,
+DiscountAmount int NOT NULL,
+Quantity int NOT NULL,
+);
+
 CREATE TABLE tblRental
 (
 RentalID int NOT NULL PRIMARY KEY,
@@ -90,16 +98,17 @@ CustomerID int REFERENCES tblCustomers(CustomerID), -- fk
 );
 
 
-CREATE TABLE tblOrder
+CREATE TABLE tblOrder -- edit order 
 (
-OrderID int NOT NULL PRIMARY KEY,
+OrderID int NOT NULL IDENTITY PRIMARY KEY,
 CustomerID int REFERENCES tblCustomers(CustomerID),
 ShipTo int REFERENCES tblCustAddress(AddressId), -- FK
 BillTo int REFERENCES tblCustAddress(AddressId), -- FK
-Product int REFERENCES tblProducts(ProductID), -- FK
+--Product int REFERENCES tblProducts(ProductID), -- FK
+ItemsID int REFERENCES tblOrderItems(ItemID),
 Paid bit NOT NULL,
 DateSent Date NULL,
-Quantity int NOT NULL 
+--Quantity int NOT NULL
 );
 
 
