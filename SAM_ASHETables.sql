@@ -34,6 +34,8 @@ InstructorRating varchar(1) NULL
 CREATE TABLE tblProducts -- fourth
 (
 ProductID int NOT NULL PRIMARY KEY,
+ProductName varchar(15) NOT NULL,
+ProductPercent int NOT NULL,
 Cost float NOT NULL,
 SpecialTax float NULL,
 ProductMake varchar(15) NULL,
