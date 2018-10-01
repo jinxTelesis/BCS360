@@ -58,21 +58,21 @@ SET IDENTITY_INSERT tblInstructor OFF;
 
 SET IDENTITY_INSERT tblProducts ON; -- need to add discount percent
 INSERT INTO tblProducts(ProductID, ProductName,Cost,DiscountPercent,SpecialTax,ProductMake,ProductColor,ProductSize,ProductUnique,ProductRentalRate,ProductVendor) VALUES
-(1,'Pro vas',5000.0,   5,  0.0,'Keystone','a','arc','f',10.5,1),
-(2,'Dead',5045.0,5,0.0,'Ringer','b','arc','f',12,1),
-(3,'Mun special',300.0,10,0.0,'Munser','a','arc','f',5.75,1),
-(4,'Big game',850,5,0.3,'keystoneXL','r','arb','f',15.00,2),
-(5,'Advanced',800,10,0.0,'Brown Stone','r','bbb','f',20.00,3),
-(6,'Basic',100,10,0.0,'Learner pro','r','bbb','f',5.00,3),
-(7,'Key',2200.00,10,0.0,'Brown Stone','b','bbb','f',60.00,3),
-(8,'Brink',15000,10,0.0,'Brown Stone','w','bbb','t',0.00,3),
-(9,'Blue fly',800,10,0.0,'Ringer','w','bbb','f',12.00,1),
-(10,'Fang',3800,10,0.0,'Snake Pit','a','qaq','f',50,4),
-(11,'Low ride',850,10,0.0,'Mellow','b','arc','f',20.00,4),
-(12,'Tusser',1200,5,0.0,'Mellow x','w','ard','f',28.00,4),
-(13,'Tusser t',500,1,0.0,'Mellow x','w','bbb','f',28.00,5),
-(14,'Charlie',520,5,0.0,'Mellow x','w','bbb','f',24.00,5),
-(15,'Eigth',500,5,0.0,'Ted D','w','arb','f',14.00,11);
+(1,'Pro vas',5000.0,   5,  0.0,'Keystone','a','f',0,10.5,1),
+(2,'Dead',   5045.0,   5,  0.0,'Ringer','b','f',0,12,1),
+(3,'Mun special',300.0,10, 0.0,'Munser','w','f',1,5.75,1),
+(4,'Big game',850,     5,  0.3,'keystoneXL','w','f',0,15.00,2),
+(5,'Advanced',800,10,0.0,'Brown Stone','w','f',0,20.00,3),
+(6,'Basic',100,10,0.0,'Learner pro','w','f',0,5.00,3),
+(7,'Key',2200.00,10,0.0,'Brown Stone','w','f',0,60.00,3),
+(8,'Brink',15000,10,0.0,'Brown Stone','w','t',0,0.00,3),
+(9,'Blue fly',800,10,0.0,'Ringer','b','f',0,12.00,1),
+(10,'Fang',3800,10,0.0,'Snake Pit','q','f',0,50,4),
+(11,'Low ride',850,10,0.0,'Mellow','a','f',0,20.00,4),
+(12,'Tusser',1200,5,0.0,'Mellow x','a','f',0,28.00,4),
+(13,'Tusser t',500,1,0.0,'Mellow x','b','f',0,28.00,5),
+(14,'Charlie',520,5,0.0,'Mellow x','b','f',0,24.00,5),
+(15,'Eigth',500,5,0.0,'Ted D','a','f',0,14.00,11);
 SET IDENTITY_INSERT tblProducts OFF;
 
 
