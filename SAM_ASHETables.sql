@@ -1,4 +1,4 @@
-CREATE TABLE tblLocation -- first
+dCREATE TABLE tblLocation -- first
 (
 StoreID int NOT NULL IDENTITY PRIMARY KEY,
 StoreName varchar(20) NOT NULL,
@@ -20,6 +20,11 @@ VendorEmail varchar(60) NOT NULL,
 VendorCountry varchar(20) NOT NULL,
 VendorPrimaryLanguage varchar(2) NOT NULL, -- code
 VendorRating varchar(1) NULL-- code
+);
+
+CREATE TABLE tblCategories2(
+CategoryID int NOT NULL IDENTITY PRIMARY KEY,
+CategoryName varchar(15) NOT NULL
 );
 
 CREATE TABLE tblInstructor -- third
