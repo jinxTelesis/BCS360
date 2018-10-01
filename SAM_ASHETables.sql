@@ -1,4 +1,4 @@
-dCREATE TABLE tblLocation -- first
+CREATE TABLE tblLocation -- first
 (
 StoreID int NOT NULL IDENTITY PRIMARY KEY,
 StoreName varchar(20) NOT NULL,
@@ -12,7 +12,7 @@ LastYearSales int NULL
 
 CREATE TABLE tblVendor -- second
 (
-VendorID int NOT NULL PRIMARY KEY,
+VendorID int NOT NULL IDENTITY PRIMARY KEY,
 CraftsManFName varchar(30) NOT NULL,
 CraftsManLName varchar(30) NOT NULL,
 VendorManagerContact varchar(50) NULL,
@@ -29,7 +29,7 @@ CategoryName varchar(15) NOT NULL
 
 CREATE TABLE tblInstructor -- third
 (
-InstructorID int NOT NULL PRIMARY KEY,
+InstructorID int NOT NULL IDENTITY PRIMARY KEY,
 InstructorFName varchar(30) NOT NULL,
 InstructorLName varchar(30) NOT NULL,
 InstructorRate float default 10.00 NOT NULL,
@@ -38,7 +38,7 @@ InstructorRating varchar(1) NULL
 
 CREATE TABLE tblProducts -- fourth
 (
-ProductID int NOT NULL PRIMARY KEY,
+ProductID int NOT NULL IDENTITY PRIMARY KEY,
 ProductName varchar(15) NOT NULL,
 Cost float NOT NULL,
 DiscountPercent int NOT NULL,
@@ -79,7 +79,7 @@ ShippingAddress int REFERENCES tblCustAddress(AddressId)
 
 CREATE TABLE tblServiceOrder
 (
-ServiceOrdID int NOT NULL PRIMARY KEY,
+ServiceOrdID int NOT NULL IDENTITY PRIMARY KEY,
 ServiceStateDate Date,
 ServiceEndDate Date,
 CustomerID int NOT NULL REFERENCES tblCustomers(CustomerID), -- fk
@@ -96,7 +96,7 @@ Quantity int NOT NULL,
 
 CREATE TABLE tblRental
 (
-RentalID int NOT NULL PRIMARY KEY,
+RentalID int NOT NULL IDENTITY PRIMARY KEY,
 StartDate date,
 EndDate date,
 ProductIDRentalRate int REFERENCES tblProducts(ProductID), -- fk
