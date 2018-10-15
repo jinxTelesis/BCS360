@@ -1,6 +1,6 @@
-SET IDENTITY_INSERT tblOrders3 ON;
+SET IDENTITY_INSERT tOrd ON;
 
-INSERT INTO tblOrders3 (OrderID, CustomerID, OrderDate, ShipAmount, TaxAmount, ShipDate, ShipAddressID, CardType, CardNumber, CardExpires, BillingAddressID) VALUES
+INSERT INTO tOrd(OrderID, CustomerID, OrderDate, ShipAmount, TaxAmount, ShipDate, ShipAddressID, CardType, CardNumber, CardExpires, BillingAddressID) VALUES
 (1, 1, '2016-03-28 09:40:28.000', 5.00, 58.75, '2016-03-31 09:41:11.000', 1, 'Visa', '4111111111111111', '04/2018', 2), 
 (2, 2, '2016-03-28 11:23:20.000', 5.00, 21.27, '2016-03-31 11:24:03.000', 3, 'Visa', '4012888888881881', '08/2020', 3), 
 (3, 1, '2016-03-29 09:44:58.000', 10.00, 102.29, '2016-04-01 09:45:41.000', 1, 'Visa', '4111111111111111', '06/2020', 2), 
@@ -43,4 +43,4 @@ INSERT INTO tblOrders3 (OrderID, CustomerID, OrderDate, ShipAmount, TaxAmount, S
 (40, 34, '2016-05-08 21:41:29.000', 5.00, 34.25, NULL, 44, 'American Express', '3782822463100005', '08/2017', 44), 
 (41, 35, '2016-05-09 07:52:55.000', 10.00, 55.52, NULL, 45, 'Visa', '4111111111111111', '05/2018', 45)
 
-SET IDENTITY_INSERT tblOrders3 OFF;
+SET IDENTITY_INSERT tOrd OFF;
