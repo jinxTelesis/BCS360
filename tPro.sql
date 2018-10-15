@@ -1,5 +1,5 @@
-SET IDENTITY_INSERT tblProducts3 ON;
-INSERT INTO tblProducts3(ProductID,CategoryID,ProductCode,ProductName,Description,ListPrice,DiscountPercent,DateAdded) VALUES
+SET IDENTITY_INSERT tPro ON;
+INSERT INTO tPro(ProductID,CategoryID,ProductCode,ProductName,Description,ListPrice,DiscountPercent,DateAdded) VALUES
 (1,1,'aaa','guitar','double slide electric guitar',100.00,90.00,'10-8-2018'),
 (2,2,'aab','guitar','single slide electric guitar',100.00,90.00,'10-7-2018'),
 (3,1,'aac','guitar','no slide electric guitar',100.00,80.00,'11-7-2018'),
@@ -17,4 +17,4 @@ INSERT INTO tblProducts3(ProductID,CategoryID,ProductCode,ProductName,Descriptio
 (15,4,'aao','sax','gold sax',10000,9000,'9-7-2017'
 );
 
-SET IDENTITY_INSERT tblProducts3 OFF;
+SET IDENTITY_INSERT tPro OFF;
