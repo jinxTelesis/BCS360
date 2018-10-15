@@ -1,12 +1,12 @@
 
-CREATE TABLE tblCategories (
+CREATE TABLE tCat (
   CategoryID        INT            PRIMARY KEY   IDENTITY,
   CategoryName      VARCHAR(255)   NOT NULL      UNIQUE
 );
 
-CREATE TABLE tblProducts (
+CREATE TABLE tPro (
   ProductID         INT            PRIMARY KEY   IDENTITY,
-  CategoryID        INT            REFERENCES tblCategories (CategoryID), 
+  CategoryID        INT            REFERENCES tCat (CategoryID), 
   ProductCode       VARCHAR(10)    NOT NULL      UNIQUE,
   ProductName       VARCHAR(255)   NOT NULL,
   Description       TEXT           NOT NULL,
@@ -15,7 +15,7 @@ CREATE TABLE tblProducts (
   DateAdded         DATETIME                     DEFAULT NULL
 );
 
-CREATE TABLE tblCustomers (
+CREATE TABLE tCus (
   CustomerID           INT            PRIMARY KEY   IDENTITY,
   EmailAddress         VARCHAR(255)   NOT NULL      UNIQUE,
   Password             VARCHAR(60)    NOT NULL,
@@ -25,9 +25,9 @@ CREATE TABLE tblCustomers (
   BillingAddressID     INT                          DEFAULT NULL
 );
 
-CREATE TABLE tblAddresses (
+CREATE TABLE tAdd (
   AddressID          INT            PRIMARY KEY   IDENTITY,
-  CustomerID         INT            REFERENCES Customers (CustomerID),
+  CustomerID         INT            REFERENCES tCus (CustomerID),
   Line1              VARCHAR(60)    NOT NULL,
   Line2              VARCHAR(60)                  DEFAULT NULL,
   City               VARCHAR(40)    NOT NULL,
@@ -37,9 +37,9 @@ CREATE TABLE tblAddresses (
   Disabled           INT            NOT NULL      DEFAULT 0
 );
 
-CREATE TABLE tblOrders2 (
+CREATE TABLE tOrd (
   OrderID           INT            PRIMARY KEY  IDENTITY,
-  CustomerID        INT            REFERENCES tblCustomers (CustomerID),
+  CustomerID        INT            REFERENCES tCus(CustomerID),
   OrderDate         DATETIME       NOT NULL,
   ShipAmount        MONEY          NOT NULL,
   TaxAmount         MONEY          NOT NULL,
@@ -51,10 +51,10 @@ CREATE TABLE tblOrders2 (
   BillingAddressID  INT            NOT NULL    
 );
 
-CREATE TABLE tblOrderItems2 (
+CREATE TABLE tOIt (
   ItemID             INT            PRIMARY KEY  IDENTITY,
-  OrderID            INT            REFERENCES tblOrders2 (OrderID),
-  ProductID          INT            REFERENCES tblProducts (ProductID),
+  OrderID            INT            REFERENCES tOrd (OrderID),
+  ProductID          INT            REFERENCES tPro (ProductID),
   ItemPrice          MONEY  NOT NULL,
   DiscountAmount     MONEY  NOT NULL,
   Quantity           INT            NOT NULL    
