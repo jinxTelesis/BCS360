@@ -1,6 +1,6 @@
-SET IDENTITY_INSERT tblAddresses3 ON;
+SET IDENTITY_INSERT tAdd ON;
 
-INSERT INTO tblAddresses3 (AddressID, CustomerID, Line1, Line2, City, State, ZipCode,Phone, Disabled) VALUES
+INSERT INTO tAdd (AddressID, CustomerID, Line1, Line2, City, State, ZipCode,Phone, Disabled) VALUES
 (1, 1, '100', 'East Ridgewood Ave.', 'Paramus', 'NJ', '07652',673-568-5632, 0),
 (2, 1, '21', 'Rosewood Rd.',  'Woodcliff Lake', 'NJ', '07677',123-528-3632, 0),
 (3, 2, '16285', 'Wendell St.',  'Omaha', 'NE', '68135',613-168-2632, 0),
@@ -48,4 +48,4 @@ INSERT INTO tblAddresses3 (AddressID, CustomerID, Line1, Line2, City, State, Zip
 (45, 35, '228' , 'Runamuck Pl #2808',  'Baltimore', 'MD', '21224',603-568-5632, 0);
 
 
-SET IDENTITY_INSERT tblAddresses3 OFF
+SET IDENTITY_INSERT tAdd OFF
