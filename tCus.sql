@@ -1,6 +1,6 @@
-SET IDENTITY_INSERT tblCustomers3 ON;
+SET IDENTITY_INSERT tCus ON;
 
-INSERT INTO tblCustomers3 (CustomerID, EmailAddress,Password, FirstName, LastName, ShippingAddressID, BillingAddressID) VALUES
+INSERT INTO tCus (CustomerID, EmailAddress,Password, FirstName, LastName, ShippingAddressID, BillingAddressID) VALUES
 (1, 'allan.sherwood@yahoo.com','ABAqeBAABA', 'Allan', 'Sherwood', 1, 2),
 (2, 'barryz@gmail.com','ABABqweAABA', 'Barry', 'Zimmer', 3, 3),
 (3, 'christineb@solarone.com','ABAB12eAABA', 'Christine', 'Brown', 4, 4),
@@ -46,4 +46,4 @@ INSERT INTO tblCustomers3 (CustomerID, EmailAddress,Password, FirstName, LastNam
 (43, 'asergi@gmail.com','ABABAABA', 'Alishia', 'Sergi', 54, 54),
 (44, 'solange@shinko.com','ABABccABA', 'Solange', 'Shinko', 55, 55);
 
-SET IDENTITY_INSERT tblCustomers3 OFF;
+SET IDENTITY_INSERT tCus OFF;
